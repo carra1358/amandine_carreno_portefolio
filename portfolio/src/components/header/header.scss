@@ -1,0 +1,31 @@
+@import "../common";
+
+.header{
+    width: 100%;
+    border-bottom: 1px solid $line_color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Birthstone', cursive;
+    margin: 1em;
+}
+
+.main_nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    
+}
+
+.main_nav_item{
+    list-style: none;
+    margin: 1em;
+}
+
+.main_nav_icon{
+    color: $text_color;
+}
