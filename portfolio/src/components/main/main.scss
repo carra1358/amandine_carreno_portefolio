@@ -1,0 +1,32 @@
+@import "../common";
+
+.second_nav_container{
+    position: relative;
+}
+.decorator{
+    width: 100%;
+    height: 1px;
+    background-color: $line_color;
+
+}
+.second_nav{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    padding: 0 1em;
+    height: 13%;
+}
+
+.second_nav_item{
+    list-style: none;
+    font-size: 10px;
+    padding: 1em;
+    color: $second_nav;
+    border: 1px solid transparent;
+}
+
+.main_content{
+   margin-top: 13%;
+}
