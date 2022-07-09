@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Card from "./Card"
 import "./main.scss"
 
 function Main(data) {
@@ -8,8 +9,8 @@ function Main(data) {
         setCategorie(column)
     }
 
-    // const getContent = data.data.filter(content => content.type === categorie.toLocaleLowerCase())
-
+    const getContent = [...data.data.filter(content => content.type === categorie.toLocaleLowerCase())]
+    console.log(getContent)
     return (
         <div>
             <div className="second_nav_container">
@@ -22,6 +23,9 @@ function Main(data) {
                 </nav>
             </div>
             <div className="main_content">
+                {
+                    getContent.map(el => <Card data={el} key={el.id} />)
+                }
             </div>
         </div>
     )
