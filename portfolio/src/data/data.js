@@ -70,7 +70,7 @@ export const data = [
         type: "skills",
         id: "sk1",
         title: "React",
-        description: "During my cursus, I was introduced to React and fell in love with it.Here is the link of my last project made with React https://amandine-carreno-p14-02-05-2022.vercel.app/ ",
+        description: "During my cursus, I was introduced to React and fell in love with it. Therefore I choose to focus my job search on compagnagies having React in there Staks",
     },
     {
         type: "skills",
