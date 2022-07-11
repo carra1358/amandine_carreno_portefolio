@@ -6,13 +6,13 @@ function Bio({ src }) {
             <div className="profile_picture">
                 <img src={src} alt="" className="picture" />
             </div>
-            <div className="bio_container">
-                <div className="bio_title">
-                    <h1>Carreno_Amandine</h1>
-                    <button className="bio_button">Download resume</button>
-                </div>
 
+            <div className="bio_title">
+                <h1>Carreno_Amandine</h1>
+                <button className="bio_button">Download resume</button>
             </div>
+
+
             <div className="bio_content">
                 Front End developer{<br />}
                 Currently saying yes to new adventures ✨✨✨✨{<br />}

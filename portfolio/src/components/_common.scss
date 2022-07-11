@@ -1,3 +1,8 @@
 $line_color: #DBDBDB ;
 $second_nav : #8E8E8E;
-$text_color: #000000
+$text_color: #000000;
+
+.no_pic{
+    color: $text_color;
+    mix-blend-mode: difference;
+}

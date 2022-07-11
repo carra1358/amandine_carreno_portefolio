@@ -1,3 +1,13 @@
 
+@media (min-width: 1024px){
+  .App{
+      width: 80%;
+  }
+}
+@media (min-width: 1444px){
+  .App{
+      width: 55%;
+  }
+}
 
 

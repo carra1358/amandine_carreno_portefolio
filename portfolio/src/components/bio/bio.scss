@@ -16,9 +16,6 @@
    
 }
 
-.bio_container{
-    display: inline;
-}
 
 .bio_title{
  margin: 1em;
@@ -31,6 +28,7 @@ h1{
 }  
 }
 .bio_button{
+    visibility: hidden;
     font-size: 0.8em;
     border-radius: 4px;
     border:  1px solid $line_color;
@@ -46,3 +44,51 @@ h1{
     font-size: 12px;
     font-weight: bold;
 }
+
+@media (min-width: 768px){
+
+   .bio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10%;
+   }
+    .profile_picture{
+        display: block;
+        width: 30%;
+        float: none;
+        display: flex;
+  }
+
+    .picture{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        filter: grayscale(80%);
+        border: 1px solid $second_nav;
+        margin: 25px 0;
+       
+    }
+    
+    .bio_title{
+     margin: 0;
+     display: flex;
+     flex-wrap: nowrap;
+    
+    h1{  
+        font-size: 1.5em;
+        margin: 0;
+    }  
+    }
+    .bio_content{
+        text-align: left;
+        clear: unset;
+        margin-left: 30%;
+        margin-top: 0;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .bio_button{
+       margin-left: 1em;
+    }
+  }

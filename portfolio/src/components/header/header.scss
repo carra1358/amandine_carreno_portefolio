@@ -29,3 +29,10 @@
 .main_nav_icon{
     color: $text_color;
 }
+
+@media (min-width: 768px){
+    .header{
+        font-size: 1.4em;
+    }
+  }
+
