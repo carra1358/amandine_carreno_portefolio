@@ -3,7 +3,8 @@
 .modal{
     background-color: #ffffff;
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.6em;
+    z-index: 12;
 }
 
 .picture_container{
@@ -72,6 +73,9 @@
 .modal_link{
     border-top: 1px solid $line_color;
     padding: 1em;
+    p{
+        margin: 0;
+    }
     a{
         color: $text_color;
         text-decoration: none;
@@ -93,6 +97,7 @@
         width: 80%;
         height: 550px;
         border-radius: 0 4px 4px 0;
+        font-size: 0.9em;
     }
 
     

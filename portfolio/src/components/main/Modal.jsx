@@ -4,12 +4,13 @@ import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons
 import "./modal.scss"
 // eslint-disable
 
-function Modal({ title, description, pictures, github, deploy, type }) {
+function Modal({ title, description, pictures, github, deploy, link, type }) {
 
     const [index, setIndex] = useState(0)
     const red = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
     const green = Math.floor(Math.random() * 256);
+    console.log(deploy, link)
 
     return (
         <>
@@ -37,17 +38,14 @@ function Modal({ title, description, pictures, github, deploy, type }) {
                             {description.map(el => <li key={el}>{el}</li>)
                             }</ul>
                         <div className="modal_link">
-                            <a href={github} target="_blank" rel="noreferrer" >Go to repository <IoIosArrowRoundForward /></a>
+                            <a href={github} target="_blank" rel="noreferrer" >Go to the repository <IoIosArrowRoundForward /></a>
                         </div>
-                        <div className="modal_link">
-                            {
-                                deploy === "Project available only on github" ?
-                                    <p>
-                                        {deploy}
-                                    </p> :
-                                    <a href={deploy} target="_blank" rel="noreferrer" > Go to Link to project <IoIosArrowRoundForward /></a>
-                            }
-                        </div>
+                        {
+                            deploy === true ?
+                                <div className="modal_link"><a href={link} target="_blank" rel="noreferrer">Go to the deployed project <IoIosArrowRoundForward /></a> </div> :
+                                <div className="modal_link"><p>Project available only on Github</p></div>
+                        }
+
                     </div>
                 </div>
                 :

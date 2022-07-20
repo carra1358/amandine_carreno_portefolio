@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { GrClose } from "react-icons/gr"
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io"
 import Card from "./Card"
@@ -15,10 +15,12 @@ function Main(data) {
     const [pictures, setPictures] = useState(null)
     const [github, setGithub] = useState("")
     const [deploy, setDeploy] = useState("")
+    const [link, setLink] = useState("")
     const [type, setType] = useState(null)
     const red = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
     const green = Math.floor(Math.random() * 256);
+
 
     const handleNavigation = (column) => {
         setCategorie(column)
@@ -26,39 +28,47 @@ function Main(data) {
 
 
 
-    const getContent = [...data.data.filter(content => content.type === categorie.toLocaleLowerCase())]
+    const getContent = useMemo(() => {
+        return data.data.filter(content => content.type === categorie.toLocaleLowerCase())
+    }, [categorie, data])
 
 
     const handleModale = (index, title, description, pictures, github, deploy, link, type) => {
         setIndex(index)
+        setLink(link)
         setTitle(title)
         setDescription(description)
         setPictures(pictures)
         setGithub(github)
         setType(type)
-        deploy ? setDeploy(link) : setDeploy("Project available only on github")
+        setDeploy(deploy)
+
+
         setModal(true)
     }
 
     const handleModaleNavigationPrev = () => {
 
         index <= 0 ? setIndex(0) : setIndex(index - 1)
+
     }
 
     const handleModaleNavigationNext = () => {
         index < getContent.length - 1 ? setIndex(index + 1) : setIndex(getContent.length - 1)
-    }
 
+    }
 
     useEffect(() => {
         setTitle(getContent[index].title)
         setDescription(getContent[index].description)
         setPictures(getContent[index].pictures)
         setGithub(getContent[index].github)
-        setDeploy(getContent[index].link)
+        setLink(getContent[index].link)
+        setDeploy(getContent[index].deploy)
         setType(getContent[index].type)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index])
+
+    }, [index, getContent])
+
 
     return (
         <div>
@@ -84,7 +94,7 @@ function Main(data) {
                     modal ? <div className="modal_overlay" >
                         <div onClick={() => setModal(false)} className="icon_container"><GrClose /></div>
                         <div className="modal_container">
-                            <Modal title={title} description={description} pictures={pictures} github={github} deploy={deploy} type={type} />
+                            <Modal title={title} description={description} pictures={pictures} github={github} deploy={deploy} link={link} type={type} />
                             <div className="nav_publication"> <span className="nav_publication_left" onClick={() => { handleModaleNavigationPrev() }}><IoIosArrowDropleft /></span> <span className="nav_publication_right" onClick={() => handleModaleNavigationNext()}><IoIosArrowDropright /></span></div>
                         </div>
                     </div> : null

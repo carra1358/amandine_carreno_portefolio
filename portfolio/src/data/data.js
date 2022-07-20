@@ -120,7 +120,7 @@ export const data = [
         type: "education",
         id: "ed1",
         title: "Certification Front-End developer",
-        description: "Completing the OpenClassroom Front-End Developer Curriculum allowed me to take my first steps towards my new career. From today I feel confident to be a real asset for my future team.",
+        description: "Completing the OpenClassrooms Front-End Developer Curriculum allowed me to take my first steps toward my new career. From today I feel confident to be a real asset to my future team.",
         cover: "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/opc.png?alt=media&token=c1022904-d42b-4f2f-a64b-d30e2814d320",
         pictures: ["https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/opc.png?alt=media&token=c1022904-d42b-4f2f-a64b-d30e2814d320"]
     },
@@ -128,14 +128,14 @@ export const data = [
         type: "interests",
         id: "in1",
         title: "Travel",
-        description: "From Lisbon to Seoul and more, I enjoyed all the time spent learning about new cultures, languages ​​and architectures.",
+        description: "From Osaka to Lisbon and more, I enjoyed all the time spent learning about new cultures, languages ​​, and architecture.",
         cover: "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/jpn_travel.jpg?alt=media&token=c8d030c0-ec62-415e-8bd4-a5a90cd16bd2",
         pictures: ["https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/jpn_travel.jpg?alt=media&token=c8d030c0-ec62-415e-8bd4-a5a90cd16bd2", "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/kr_travel.JPG?alt=media&token=e530cc28-8cfa-4e6d-a05f-2bda1fd984e7", "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/ptg_travel.jpg?alt=media&token=3b78acca-4005-4570-b75a-b4ec27169d6a"]
     }, {
         type: "interests",
         id: "in2",
         title: "Gastronomy",
-        description: "I live to share the food I've cooked with others and discover new recipes",
+        description: "I love to share the food I've cooked with others and discover new recipes.",
         cover: "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/straberry_shortcake.jpg?alt=media&token=972c276a-f993-4385-85b5-cf5c4a81a70f",
         pictures: ["https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/straberry_shortcake.jpg?alt=media&token=972c276a-f993-4385-85b5-cf5c4a81a70f", "https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/tako_food.jpg?alt=media&token=a7efbcd9-974f-469c-a834-fb7827f5c856"]
     },

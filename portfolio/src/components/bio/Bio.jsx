@@ -1,5 +1,6 @@
 import "./bio.scss"
 
+
 function Bio({ src }) {
     return (
         <div className="bio">
@@ -9,7 +10,7 @@ function Bio({ src }) {
 
             <div className="bio_title">
                 <h1>Carreno_Amandine</h1>
-                <button className="bio_button">Download resume</button>
+                <a href={"https://firebasestorage.googleapis.com/v0/b/carra-portfolio-assets.appspot.com/o/cv_amandine_carreno_eng%20(2).pdf?alt=media&token=0e78299f-341a-4c72-9ccc-43c53672c71a"} download="amandine_carreno_resume.pdf" target="_blank" rel="noreferrer"><button className="bio_button" >Open resume</button></a>
             </div>
 
 
@@ -18,7 +19,7 @@ function Bio({ src }) {
                 Currently saying yes to new adventures ✨✨✨✨{<br />}
                 Speak 🇫🇷 🇺🇸{<br />}
                 Ideally Full-remote{<br />}
-                Ok to relocate Barcelona  ☀️ Paris 🥖  Marseille ⛴ {<br />}
+                Ready to relocate to Barcelona  ☀️ Paris 🥖  Marseille ⛴ {<br />}
             </div>
 
         </div>
